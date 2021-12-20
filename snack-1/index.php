@@ -7,18 +7,18 @@
     <title>php-snacks-b1</title>
     <?php
     $partita1 = [
-        $squadraCasa = [
+        $squadraCasa1 = [
             "punti" => "20"
         ],
-        $squadraOspite = [
+        $squadraOspite1 = [
             "punti" => "10"
         ]
     ];
     $partita2 = [
-        $squadraCasa = [
+        $squadraCasa2 = [
             "punti" => "30"
         ],
-        $squadraOspite = [
+        $squadraOspite2 = [
             "punti" => "20"
         ]  
     ];
@@ -31,14 +31,32 @@
         <h3>Squadra casa</h3>
         <div>
             <?php
-            echo "punti"
+            echo "punti=" . $squadraCasa1["punti"];
             ?>
         </div>
 
         <h3>Squadra ospite</h3>
         <div>
             <?php
-            echo
+            echo "punti=" . $squadraOspite1["punti"];
+            ?>
+        </div>
+    </div>
+
+    <div>
+        <h1>Partita 2</h1>
+
+        <h3>Squadra casa</h3>
+        <div>
+            <?php
+            echo "punti=" . $squadraCasa2["punti"];
+            ?>
+        </div>
+
+        <h3>Squadra ospite</h3>
+        <div>
+            <?php
+            echo "punti=" . $squadraOspite2["punti"];
             ?>
         </div>
     </div>
