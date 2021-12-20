@@ -8,7 +8,7 @@
     <?php
     $partita1 = [
         $squadraCasa1 = [
-            "punti" => "20"
+            "punti" => "20-"
         ],
         $squadraOspite1 = [
             "punti" => "10"
@@ -16,7 +16,7 @@
     ];
     $partita2 = [
         $squadraCasa2 = [
-            "punti" => "30"
+            "punti" => "30-"
         ],
         $squadraOspite2 = [
             "punti" => "20"
@@ -28,37 +28,36 @@
     <div>
         <h1>Partita 1</h1>
 
-        <h3>Squadra casa</h3>
-        <div>
-            <?php
-            echo "punti=" . $squadraCasa1["punti"];
-            ?>
-        </div>
+        <h3>Squadra casa -</h3>
 
-        <h3>Squadra ospite</h3>
-        <div>
+        <h3>Squadra ospite |</h3>
+
+        <h3>
             <?php
-            echo "punti=" . $squadraOspite1["punti"];
+            echo $squadraCasa1["punti"];
+            echo $squadraOspite1["punti"];
             ?>
-        </div>
+        </h3>
     </div>
 
     <div>
         <h1>Partita 2</h1>
 
-        <h3>Squadra casa</h3>
-        <div>
-            <?php
-            echo "punti=" . $squadraCasa2["punti"];
-            ?>
-        </div>
+        <h3>Squadra casa -</h3>
 
-        <h3>Squadra ospite</h3>
-        <div>
+        <h3>Squadra ospite |</h3>
+
+        <h3>
             <?php
-            echo "punti=" . $squadraOspite2["punti"];
+            echo $squadraCasa2["punti"];
+            echo $squadraOspite2["punti"];
             ?>
-        </div>
+        </h3>
     </div>
 </body>
+<style>
+    h3 {
+        display: inline-block;
+    }
+</style>
 </html>
