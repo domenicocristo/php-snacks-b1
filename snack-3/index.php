@@ -48,31 +48,23 @@
     ?>
 </head>
 <body>
-    <div>
-        <h1>10/01/2019</h1>
-        <h3>
-            <?php
-            print_r($posts["10/01/2019"]);
-            ?>
-        </h3>
-    </div>
+    <p>
+        <?php
+        $dates = array_keys($posts);
+        for ($x = 0; $x < count($dates); $x++) {
+            $date = $dates[$x];
+            echo "<h1>" . $date . "<h1/>";
 
-    <div>
-        <h1>10/02/2019</h1>
-        <h3>
-            <?php
-            print_r($posts["10/02/2019"]);
-            ?>
-        </h3>
-    </div>
+            $subPosts = $posts[$date];
+            for ($y = 0; $y < count($subPosts); $y++) {
+                $post = $subPosts[$y];
+                echo "<h4>" . $post["title"] . "<h4/>"
+                . $post["text"] . "<br>"
+                . $post["author"] . "<br>";
 
-    <div>
-        <h1>10/05/2019</h1>
-        <h3>
-            <?php
-            print_r($posts["15/05/2019"]);
-            ?>
-        </h3>
-    </div>
+            }
+        }
+        ?>
+    </p>
 </body>
 </html>

@@ -6,58 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-snacks-b1</title>
     <?php
-    $partita1 = [
-        $squadraCasa1 = [
-            "punti" => "20-"
+    $partite = [
+       [
+           "squadraCasa" => "team1",
+           "squadraOspite" => "team2",
+           "puntiCasa" => 20,
+           "puntiOspite" => 10
+       ],
+       [
+            "squadraCasa" => "team3",
+            "squadraOspite" => "team4",
+            "puntiCasa" => 30,
+            "puntiOspite" => 20
         ],
-        $squadraOspite1 = [
-            "punti" => "10"
+        [
+            "squadraCasa" => "team5",
+            "squadraOspite" => "team6",
+            "puntiCasa" => 40,
+            "puntiOspite" => 30
         ]
-    ];
-    $partita2 = [
-        $squadraCasa2 = [
-            "punti" => "30-"
-        ],
-        $squadraOspite2 = [
-            "punti" => "20"
-        ]  
     ];
     ?>
 </head>
 <body>
-    <div>
-        <h1>Partita 1</h1>
+    <p>
+        <?php
+        for ($i = 0; $i < count($partite); $i++) {
+            $partita = $partite[$i];
 
-        <h3>Squadra casa -</h3>
-
-        <h3>Squadra ospite |</h3>
-
-        <h3>
-            <?php
-            echo $squadraCasa1["punti"];
-            echo $squadraOspite1["punti"];
-            ?>
-        </h3>
-    </div>
-
-    <div>
-        <h1>Partita 2</h1>
-
-        <h3>Squadra casa -</h3>
-
-        <h3>Squadra ospite |</h3>
-
-        <h3>
-            <?php
-            echo $squadraCasa2["punti"];
-            echo $squadraOspite2["punti"];
-            ?>
-        </h3>
-    </div>
+            echo $partita["squadraCasa"] . " - " . $partita["squadraOspite"]
+            . " | " . $partita["puntiCasa"] . " - " . $partita["puntiOspite"] . "<br>";
+        }
+        ?>
+    </p>
 </body>
-<style>
-    h3 {
-        display: inline-block;
-    }
-</style>
 </html>

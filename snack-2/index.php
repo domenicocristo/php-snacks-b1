@@ -7,14 +7,12 @@
     <title>snack-2</title>
     <?php
     $name = $_GET["name"];
-
     $mail = $_GET["mail"];
-
     $age = $_GET["age"];
 
-    $verifyName = strlen($name);
+    $verifyName = strlen($name) > 3;
 
-    $verifyMail = strpos($mail, "@" . ".");
+    $verifyMail = strpos($mail, "@") !== false && strpos($mail, ".") !== false;
 
     $verifyAge = is_numeric($age);
     ?>
@@ -22,7 +20,7 @@
 <body>
     <div>
         <?php
-        if ($verifyName >= 3 && $verifyMail == true && $verifyAge == true)
+        if ($verifyName && $verifyMail && $verifyAge)
             echo "Accesso riuscito";
         else {
             echo "Accesso negato";

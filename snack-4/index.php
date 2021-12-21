@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snack-4</title>
     <?php
-    for ($i = 0; $i < 15; $i++) {
+    $array = [];
+
+    while (count($array) < 15) {
         $numbers = rand(1, 100);
-        echo "<h1>$numbers</h1>";
+        if (!in_array($numbers, $array)) {
+            $array []= $numbers;
+        };
+       
     }
     ?>
 </head>
 <body>
-  
+  <h1>
+    <?php
+    print_r($array)
+    ?>
+  </h1>
 </body>
-<style>
-    h1 {
-        text-align: center;
-    }
-</style>
 </html>
